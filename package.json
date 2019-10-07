@@ -1,0 +1,13 @@
+{
+  "name": "pooltogetherjs",
+  "version": "0.1.0",
+  "description": "PoolTogether Client JavaScript library",
+  "main": "src/index.js",
+  "repository": "https://github.com/pooltogether/pooltogetherjs",
+  "author": "Brendan Asselstine",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "bn.js": "^4.11.0"
+  }
+}
