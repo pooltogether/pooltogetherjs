@@ -1,4 +1,14 @@
-export function calculatePrizeEstimate(
+const constants = require('../constants')
+
+/**
+ * Calculates the estimated prize
+ * @name utils.calculatePrizeEstimate
+ * @param {bignumber} balance 
+ * @param {bignumber} prize 
+ * @param {bignumber} blocksFixedPoint18 
+ * @param {bignumber} supplyRatePerBlock 
+ */
+function calculatePrizeEstimate(
   balance,
   prize,
   blocksFixedPoint18,
@@ -6,10 +16,12 @@ export function calculatePrizeEstimate(
 ) {
   const interestRate = blocksFixedPoint18
     .mul(supplyRatePerBlock)
-    .div(ethers.constants.WeiPerEther)
+    .div(constants.WeiPerEther)
 
   const estimatedInterestAccrued = interestRate.mul(balance)
-    .div(ethers.constants.WeiPerEther)
+    .div(constants.WeiPerEther)
 
   return prize.add(estimatedInterestAccrued)
 }
+
+module.exports = calculatePrizeEstimate
