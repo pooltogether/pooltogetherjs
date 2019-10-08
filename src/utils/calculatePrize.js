@@ -3,11 +3,11 @@ const constants = require('../constants')
 /**
  * Calculates the size of the prize.
  * @name utils.calculatePrize
- * @param {bignumber} balance 
- * @param {bignumber} accountedBalance 
- * @param {bignumber} feeFraction
+ * @param {bignumber} balance The current Pool#balance
+ * @param {bignumber} accountedBalance The current Pool#accountedBalance
+ * @param {bignumber} feeFraction Fraction represented as fixed point 18 (as in wei)
  */
-export function calculatePrize(balance, accountedBalance, feeFraction) {
+function calculatePrize(balance, accountedBalance, feeFraction) {
   const interestAccrued = balance
     .sub(accountedBalance)
 
@@ -17,3 +17,5 @@ export function calculatePrize(balance, accountedBalance, feeFraction) {
 
   return interestAccrued.sub(fee)
 }
+
+module.exports = calculatePrize

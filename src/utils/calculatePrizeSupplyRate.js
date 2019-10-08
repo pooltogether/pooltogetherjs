@@ -6,8 +6,10 @@ const constants = require('../constants')
  * @param {bignumber} supplyRatePerBlock 
  * @param {bignumber} feeFraction 
  */
-export function calculatePrizeSupplyRate(supplyRatePerBlock, feeFraction) {
+function calculatePrizeSupplyRate(supplyRatePerBlock, feeFraction) {
   return supplyRatePerBlock
     .mul(constants.WeiPerEther.sub(feeFraction))
     .div(constants.WeiPerEther)
 }
+
+module.exports = calculatePrizeSupplyRate
