@@ -1,3 +1,11 @@
+/**
+ * Calculates the estimated prize
+ * @name utils.calculatePrizeEstimate
+ * @param {bignumber} balance 
+ * @param {bignumber} prize 
+ * @param {bignumber} blocksFixedPoint18 
+ * @param {bignumber} supplyRatePerBlock 
+ */
 export function calculatePrizeEstimate(
   balance,
   prize,
