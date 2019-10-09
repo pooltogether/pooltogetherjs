@@ -19,7 +19,7 @@ const pt = require('pooltogetherjs')
 pt.utils.calculatePrize(balance, accountedBalance, feeFraction)
 ```
 
-[API Reference](https://pooltogether.github.io/pooltogetherjs/index.html)
+[API Reference](https://pooltogether.github.io/pooltogetherjs/)
 
 ## Recipe
 
