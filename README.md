@@ -1,6 +1,6 @@
 # PoolTogether.js
 
-Helper functions for calculating Pool values.  Functions use the BigNumber library `bn.js` which is common to both `ethers.js` and `web3.js`.
+Helper functions for calculating Pool values.  Functions use the BigNumber library `bn.js`.
 
 The PoolTogether algorithm is described in the Medium article [Inside PoolTogether v2.0](https://medium.com/pooltogether/inside-pooltogether-v2-0-e7d0e1b90a08).
 
