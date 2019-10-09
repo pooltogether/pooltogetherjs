@@ -2,6 +2,7 @@ const BN = require('bn.js')
 const constants = require('../constants')
 
 function parseEther(ether) {
+  console.warn(`pooltogetherjs: utils.parseEther(ether): This function should not be used in production!`)
   const scale = 1000000000
   var value = parseFloat(ether)
   // hack to handle values less than 0

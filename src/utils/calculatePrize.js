@@ -1,4 +1,5 @@
 const constants = require('../constants')
+const toBN = require('./toBN')
 
 /**
  * Calculates the size of the prize.
@@ -8,11 +9,11 @@ const constants = require('../constants')
  * @param {bignumber} feeFraction Fraction represented as fixed point 18 (as in wei)
  */
 function calculatePrize(balance, accountedBalance, feeFraction) {
-  const interestAccrued = balance
-    .sub(accountedBalance)
+  const interestAccrued = toBN(balance)
+    .sub(toBN(accountedBalance))
 
   const fee = interestAccrued
-    .mul(feeFraction)
+    .mul(toBN(feeFraction))
     .div(constants.WeiPerEther)
 
   return interestAccrued.sub(fee)
