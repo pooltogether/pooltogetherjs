@@ -56,6 +56,16 @@
               
                 
                 <li><a
+                  href='#utilstobn'
+                  class="">
+                  utils.toBN
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#constantsweiperether'
                   class="">
                   constants.WeiPerEther
@@ -197,7 +207,8 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>balance</span> <code class='quiet'>(bignumber)</code>
-	    
+	    The current Pool#balance
+
           </div>
           
         </div>
@@ -205,7 +216,8 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>prize</span> <code class='quiet'>(bignumber)</code>
-	    
+	    The current Pool prize as calculated by @see utils.calculatePrize
+
           </div>
           
         </div>
@@ -213,7 +225,8 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>blocksFixedPoint18</span> <code class='quiet'>(bignumber)</code>
-	    
+	    The remaining number of blocks expressed as a fixed point 18 number (like ether denominated in wei)
+
           </div>
           
         </div>
@@ -221,7 +234,8 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>supplyRatePerBlock</span> <code class='quiet'>(bignumber)</code>
-	    
+	    The fraction that is accrued per block
+
           </div>
           
         </div>
@@ -231,6 +245,14 @@
 
   
 
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>bignumber</code>:
+        The projected prize
+
+      
+    
   
 
   
@@ -282,7 +304,8 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>supplyRatePerBlock</span> <code class='quiet'>(bignumber)</code>
-	    
+	    The supply rate per block as returned by Pool#supplyRatePerBlock
+
           </div>
           
         </div>
@@ -290,7 +313,70 @@
         <div class='space-bottom0'>
           <div>
             <span class='code bold'>feeFraction</span> <code class='quiet'>(bignumber)</code>
-	    
+	    The draw fee fraction as returned by Pool#getDraw
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='utilstobn'>
+      utils.toBN
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Converts a value to a bignumber instance.</p>
+
+    <div class='pre p1 fill-light mt0'>utils.toBN</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>value</span> <code class='quiet'>((<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a> | bignumber))</code>
+	    The value to be converted to a bn.js bignumber instance
+
           </div>
           
         </div>
