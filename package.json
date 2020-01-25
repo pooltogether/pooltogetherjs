@@ -10,13 +10,15 @@
   "scripts": {
     "docs": "documentation build src/index.js -f html -o docs",
     "test": "jest",
-    "postpublish" : "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags"
+    "postpublish": "PACKAGE_VERSION=$(cat package.json | grep \\\"version\\\" | head -1 | awk -F: '{ print $2 }' | sed 's/[\",]//g' | tr -d '[[:space:]]') && git tag v$PACKAGE_VERSION && git push --tags",
+    "pretty": "prettier --write '*/**/*.js' '*.{js,md}'"
   },
   "dependencies": {
     "bn.js": "^4.11.0"
   },
   "devDependencies": {
     "documentation": "^12.1.2",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1"
   }
 }

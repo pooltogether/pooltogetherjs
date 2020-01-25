@@ -1,5 +1,5 @@
-const constants = require('../constants')
-const toBN = require('./toBN')
+const constants = require('../constants');
+const toBN = require('./toBN');
 
 /**
  * Calculates the estimated prize
@@ -14,16 +14,17 @@ function calculatePrizeEstimate(
   balance,
   prize,
   blocksFixedPoint18,
-  supplyRatePerBlock
+  supplyRatePerBlock,
 ) {
   const interestRate = toBN(blocksFixedPoint18)
     .mul(toBN(supplyRatePerBlock))
-    .div(constants.WeiPerEther)
+    .div(constants.WeiPerEther);
 
-  const estimatedInterestAccrued = interestRate.mul(toBN(balance))
-    .div(constants.WeiPerEther)
+  const estimatedInterestAccrued = interestRate
+    .mul(toBN(balance))
+    .div(constants.WeiPerEther);
 
-  return toBN(prize).add(estimatedInterestAccrued)
+  return toBN(prize).add(estimatedInterestAccrued);
 }
 
-module.exports = calculatePrizeEstimate
+module.exports = calculatePrizeEstimate;
