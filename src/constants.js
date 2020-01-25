@@ -1,4 +1,4 @@
-const BN = require('bn.js')
+const BN = require('bn.js');
 
 /**
  * @name constants.WeiPerEther
@@ -6,7 +6,7 @@ const BN = require('bn.js')
  * @type bignumber
  * @default
  */
-const WeiPerEther = new BN('1000000000000000000', 10)
+const WeiPerEther = new BN('1000000000000000000', 10);
 
 /**
  * @name constants.BlocksPerDay
@@ -14,9 +14,9 @@ const WeiPerEther = new BN('1000000000000000000', 10)
  * @type bignumber
  * @default
  */
-const BlocksPerDay = new BN('6171', 10)
+const BlocksPerDay = new BN('6171', 10);
 
 module.exports = {
   WeiPerEther,
-  BlocksPerDay
-}
+  BlocksPerDay,
+};

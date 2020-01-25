@@ -1,5 +1,5 @@
-const parseEther = require('../parseEther')
-const calculatePrizeEstimate = require('../calculatePrizeEstimate')
+const parseEther = require('../parseEther');
+const calculatePrizeEstimate = require('../calculatePrizeEstimate');
 
 describe('calculatePrizeEstimate()', () => {
   it('should calc', () => {
@@ -8,8 +8,8 @@ describe('calculatePrizeEstimate()', () => {
         parseEther('10'),
         parseEther('1'),
         parseEther('0.5'),
-        parseEther('0.1')
-      ).toString()
-    ).toEqual(parseEther('1.5').toString())
-  })
-})
+        parseEther('0.1'),
+      ).toString(),
+    ).toEqual(parseEther('1.5').toString());
+  });
+});

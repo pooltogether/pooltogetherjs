@@ -1,4 +1,4 @@
-const BN = require('bn.js')
+const BN = require('bn.js');
 
 /**
  * Converts a value to a bignumber instance.
@@ -7,10 +7,10 @@ const BN = require('bn.js')
  */
 function toBN(value) {
   if (value instanceof BN) {
-    return value
+    return value;
   } else {
-    return new BN(value.toString())
+    return new BN(value.toString());
   }
 }
 
-module.exports = toBN
+module.exports = toBN;

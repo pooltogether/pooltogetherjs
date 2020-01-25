@@ -1,5 +1,5 @@
-const constants = require('../constants')
-const toBN = require('./toBN')
+const constants = require('../constants');
+const toBN = require('./toBN');
 
 /**
  * Calculates the supply rate per block less the fee fraction
@@ -10,7 +10,7 @@ const toBN = require('./toBN')
 function calculatePrizeSupplyRate(supplyRatePerBlock, feeFraction) {
   return toBN(supplyRatePerBlock)
     .mul(constants.WeiPerEther.sub(toBN(feeFraction)))
-    .div(constants.WeiPerEther)
+    .div(constants.WeiPerEther);
 }
 
-module.exports = calculatePrizeSupplyRate
+module.exports = calculatePrizeSupplyRate;
