@@ -65,9 +65,13 @@ To calculate the estimated prize, first pull the following values from the Pool:
 You'll also need to determine how many blocks are *remaining* before the prize is awarded.
 
 ```javascript
-const pt = require('pooltogetherjs')
-const balance = // retrieve the balance via ethers.js or web3.js
-const balanceTakenAt = new Date()
+const ethers = require('ethers')
+// Use the next prize award date as the string.
+// For daily pools every day at noon PST, for weekly every Friday at noon PST.
+const awardAtMs = Date.parse('28 Feb 2020 12:00:00 PST');
+const remainingTimeS = (awardAtMs - (new Date()).getTime()) / 1000
+const remainingBlocks = remainingTimeS / 15.0 // about 15 second block periods
+const blockFixedPoint18 = ethers.utils.parseEther(remainingBlocks) // convert to fixed point 18 for fractional blocks
 ```
 
 Now you can calculate the final estimated prize:
@@ -91,5 +95,4 @@ const prizeEstimate = pt.utils.calculatePrizeEstimate(
   blocksFixedPoint18,
   prizeSupplyRate
 )
-
 ```
