@@ -4,6 +4,10 @@ Helper functions for calculating Pool values.  Functions use the BigNumber libra
 
 The PoolTogether algorithm is described in the Medium article [Inside PoolTogether v2.0](https://medium.com/pooltogether/inside-pooltogether-v2-0-e7d0e1b90a08).
 
+# Example / Demo
+
+There is an example app located at https://github.com/pooltogether/pooltogetherjs-example-dapp to show you how to get data from the Ethereum blockchain you will need before using this library.
+
 ## Installation
 
 The library is built as a CommonJS module:
